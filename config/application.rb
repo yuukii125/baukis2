@@ -12,7 +12,16 @@ module Baukis2
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    
+    config.generators do |g|
+      g.skip_routes true
+      g.helper false
+      g.assets false
+      g.test_framework :rspec
+      g.controller_specs false
+      g.view_specs false
+    end
+
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
